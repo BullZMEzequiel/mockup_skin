@@ -1,0 +1,335 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    background: url('img/background.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+    z-index: 0;
+}
+
+main {
+    flex: 1 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.main-header {
+    background-color: #8B0000;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-link {
+    text-decoration: none; /* Sin subrayado */
+    color: inherit; /* Mantiene el color blanco */
+    display: inline-block; /* Para aplicar animación */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animación suave */
+}
+
+.logo-link:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    opacity: 0.9; /* Reduce un poco la opacidad para un efecto "aura" */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    background-color: rgba(255, 99, 71, 0.8);
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgba(255, 99, 71, 1);
+}
+
+.problematic {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(rgba(240, 240, 240, 0.9), rgba(240, 240, 240, 0.7));
+    margin: 10px 5px;
+    max-width: calc(100% - 10px);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.problematic h2 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.slide-container {
+    position: relative;
+    height: 100px;
+}
+
+.slide-content {
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.nav-buttons {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav-btn {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.nav-btn:hover {
+    background-color: #333333;
+}
+
+.nav-btn:disabled {
+    background-color: #AAAAAA;
+    cursor: not-allowed;
+}
+
+.reasons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background: linear-gradient(rgba(240, 240, 240, 0.9), rgba(240, 240, 240, 0.7));
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 10px 5px;
+    max-width: calc(100% - 10px);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.reasons-text {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.reasons-text h2 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.sub-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.sub-section {
+    flex: 1;
+    min-width: 180px;
+    background: rgba(240, 240, 240, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #000000;
+}
+
+.sub-section h3 {
+    color: #000000;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.sub-section p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.scan-action {
+    text-align: center;
+    max-width: 300px;
+}
+
+.scan-action img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.btn-scan {
+    background-color: #8B0000;
+    color: #FFFFFF;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-scan:hover {
+    background-color: #6A0000;
+}
+
+.register-form {
+    max-width: 500px;
+    margin: 40px auto;
+    background: linear-gradient(rgba(240, 240, 240, 0.9), rgba(240, 240, 240, 0.7));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    transform: scale(1);
+}
+
+.register-form h2 {
+    text-align: center;
+    color: #000000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #000000;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #CCCCCC;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 1em;
+}
+
+input:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+.register-link {
+    text-align: center;
+    color: #000000;
+}
+
+.register-link a {
+    color: #FF0000;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.main-footer {
+    background-color: #8B0000;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.social-icon:hover {
+    text-decoration: underline;
+}
+
+.main-footer p {
+    margin: 5px 0;
+}
